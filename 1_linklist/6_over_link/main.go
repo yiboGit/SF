@@ -18,6 +18,7 @@ func hasCycle(head *ListNode) bool {
 			return true
 		}
 	}
+
 	return false
 }
 

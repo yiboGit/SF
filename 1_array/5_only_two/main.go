@@ -10,6 +10,21 @@ func main() {
 	fmt.Printf("%v", onlyOne(i))
 }
 
+func onlyOneTwo(nums []int) int {
+	sort.Sort(sort.IntSlice(nums))
+	var res int
+	for i, v := range nums {
+		k := i % 2
+		if k == 0 {
+			res += v
+		} else {
+			res -= v
+		}
+	}
+	return res
+
+}
+
 func onlyOne(nums []int) int {
 	if len(nums) == 0 {
 		return 0
